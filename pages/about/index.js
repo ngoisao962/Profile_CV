@@ -7,8 +7,7 @@ import {
   FaJs,
   FaReact,
   FaVuejs,
-  
-  FaFigma,
+  FaFigma
 } from 'react-icons/fa';
 
 import {
@@ -25,18 +24,45 @@ export const aboutData = [
       {
         title: 'Web Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaBootstrap/>,
-          <FaJs />,
-          <FaReact />,
-          <FaVuejs/>,
+          {
+            itemicon : <FaHtml5 />,
+
+          },
+          {
+            itemicon :<FaCss3 />,
+          },
+          {
+            itemicon :  <FaBootstrap/>,
+          },
+          {
+            itemicon : <FaJs />,
+          },
+          {
+            itemicon :  <FaReact />,
+          },
+          {
+            itemicon : <FaVuejs/>,
+          },
+          
+          
+         
+          
+         
           
         ],
       },
       {
         title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [
+          {
+            itemicon : <FaFigma />,
+          },
+          {
+            itemicon : <SiAdobexd />,
+          },
+          {
+            itemicon : <SiAdobephotoshop />
+          } ]
       },
     ],
   },
@@ -162,7 +188,7 @@ mobile and web applications, in 5 years
                   <div className='flex gap-x-4'>
                     {/* icons */}
                     {item.icons?.map((icon, iconIndex) => {
-                      return <div key={iconIndex} className='text-2xl text-white'>{icon}</div>;
+                      return <div key={iconIndex} className='text-2xl text-white'>{icon.itemicon}</div>;
                     })}
                   </div>
                 </div>
