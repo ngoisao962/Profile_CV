@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
 
-// icons
+import React, { useState } from 'react';
 import {
   FaHtml5,
   FaBootstrap,
@@ -8,13 +7,12 @@ import {
   FaJs,
   FaReact,
   FaVuejs,
-  FaWordpress,
+  
   FaFigma,
 } from 'react-icons/fa';
 
 import {
-  SiNextdotjs,
-  SiFramer,
+  
   SiAdobexd,
   SiAdobephotoshop,
 } from 'react-icons/si';
@@ -72,11 +70,11 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 
 // counter
-import CountUp from 'react-countup';
+
 
 const About = () => {
   const [index, setIndex] = useState(0);
-  console.log(index);
+  
   return (
     <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
       <Circles />
@@ -163,8 +161,8 @@ mobile and web applications, in 5 years
                   <div>{item.stage}</div>
                   <div className='flex gap-x-4'>
                     {/* icons */}
-                    {item.icons?.map((icon, itemIndex) => {
-                      return <div className='text-2xl text-white'>{icon}</div>;
+                    {item.icons?.map((icon, iconIndex) => {
+                      return <div key={iconIndex} className='text-2xl text-white'>{icon}</div>;
                     })}
                   </div>
                 </div>
